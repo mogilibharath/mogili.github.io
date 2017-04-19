@@ -1,0 +1,87 @@
+import java.lang.Character.Subset;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+
+
+
+public class WorldCupCricket 
+{
+	public static void main(String...args)
+	{
+	Scanner scan=new Scanner(System.in);
+	
+	List<String> scores=new ArrayList<String>();
+	System.out.println("Enter the number of Matches:");
+	int totalMatches;
+	int n;
+	String str;
+	totalMatches=scan.nextInt();
+	System.out.println("Enter the number of player");
+	n=scan.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("Enter the string:");
+			str=scan.next();
+			scores.add(str);
+		}
+		WorldCupCricket w1=new WorldCupCricket();
+	
+	Iterator<String> iter= scores.listIterator();
+	while(iter.hasNext())
+	{
+		System.out.println(iter.next());
+	}
+	scores=w1.findTopScorers(scores,totalMatches,n);
+	System.out.println(scores);
+	
+}
+	
+	
+		public  List<String> findTopScorers(List<String> scores,int totalMatches,int n)
+		{
+			
+			Iterator<String> iter=scores.listIterator();
+			while(iter.hasNext())
+			{
+				StringTokenizer token= new StringTokenizer(iter.next());
+				if(token.nextToken("110")!=null)
+				{
+					
+					return scores;
+				}
+				else if(token.nextToken("96")!=null)
+				{
+					
+					return scores;
+					
+				}
+				else if(token.nextToken("89")!=null)
+				{
+					return scores;
+					
+				}
+				else if(token.nextToken("99")!=null)
+				{
+					return scores;
+					
+					
+				}
+				else if(token.nextToken("103")!=null)
+				{
+					
+					return scores;
+				}
+				
+			}
+			return scores;
+			
+			
+		}
+
+
+	
+}
